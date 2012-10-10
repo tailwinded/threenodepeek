@@ -1,0 +1,3 @@
+[submodule "threenode"]
+	path = threenode
+	url = git://github.com/tailwinded/ThreeNodes.js.git
