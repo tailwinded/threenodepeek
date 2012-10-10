@@ -5,10 +5,10 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 3000, 3000
   config.vm.forward_port 43000,43000,{ :protocol => "udp"}
 
-  config.vm.share_folder "threenodes", "/home/vagrant/threenodes", "threenodes"
+  config.vm.share_folder "threenode", "/home/vagrant/threenode", "threenode"
 
   # allow for symlinks in the app folder
-  config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/threenodes", "1"]
+  config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/threenode", "1"]
 
 
   config.vm.provision :chef_solo do |chef|
